@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ep1cLIVE — official homepage</title>
+<meta name="description" content="The official homepage of ep1cLIVE. Live schedule, clips, setup and every place to find me.">
+<meta name="theme-color" content="#04050f">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<!-- TODO: replace both URLs below with your real Pages URL once it is live -->
+<link rel="canonical" href="https://example.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ep1cLIVE — official homepage">
+<meta property="og:description" content="Live schedule, clips and links for ep1cLIVE.">
+<meta property="og:site_name" content="ep1cLIVE">
+<meta property="og:url" content="https://example.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body class="is-offline">
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="stars" aria-hidden="true"></div>
+
+<!-- classic scrolling welcome strip ---------------------------------------- -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>&#9733; WELCOME 2 THE OFFICIAL ep1cLIVE HOMEPAGE &#9733;</span>
+    <span>&#9658; NEW STREAMS EVERY WEEK &#9668;</span>
+    <span>&#9733; SUBATHONS &#9733; VIEWER LOBBIES &#9733; CLIPS EVERY MORNING &#9733;</span>
+    <span>&#9658; ADD ME ON DISCORD: dsc.gg/ep1c &#9668;</span>
+    <span>&#9733; TELL YOUR FRIENDS &#9733; BOOKMARK THIS PAGE &#9733;</span>
+    <span>&#9733; WELCOME 2 THE OFFICIAL ep1cLIVE HOMEPAGE &#9733;</span>
+    <span>&#9658; NEW STREAMS EVERY WEEK &#9668;</span>
+    <span>&#9733; SUBATHONS &#9733; VIEWER LOBBIES &#9733; CLIPS EVERY MORNING &#9733;</span>
+    <span>&#9658; ADD ME ON DISCORD: dsc.gg/ep1c &#9668;</span>
+    <span>&#9733; TELL YOUR FRIENDS &#9733; BOOKMARK THIS PAGE &#9733;</span>
+  </div>
+</div>
+
+<div class="site">
+
+  <header class="rail">
+    <a class="rail__mark" href="#top">ep1c<span>LIVE</span></a>
+    <nav class="rail__nav" aria-label="Sections">
+      <a class="rail__nav-keep" href="#schedule">Schedule</a>
+      <a href="#clips">Clips</a>
+      <a href="#rig">Setup</a>
+      <a href="#watch">Watch</a>
+    </nav>
+    <p class="tally" role="status" aria-live="polite">
+      <span class="tally__lamp" aria-hidden="true"></span>
+      <span id="tally-text">Off air</span>
+    </p>
+  </header>
+  <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <main id="main">
+
+    <section class="hero tune" id="top">
+      <p class="hero__kicker">&#9733; VARIETY STREAMER &#9733; TACTICAL SHOOTERS &#9733; CHAT RUNS THE SHOW &#9733;</p>
+      <h1 class="wordmark">ep1c<span class="wordmark__live" data-text="LIVE">LIVE</span></h1>
+      <p class="hero__blink" aria-hidden="true">&#9668; NOW ACCEPTING VIEWERS &#9658;</p>
+
+      <div class="hero__row">
+        <div>
+          <div class="win readout">
+            <div class="win__bar">
+              <span class="win__ico" aria-hidden="true"></span>
+              <span class="win__title">channel_status.exe</span>
+              <span class="readout__state" id="readout-state">Off air</span>
+            </div>
+            <div class="win__body">
+              <p class="readout__now" id="readout-now">
+                Nothing live right now. Next stream is on the schedule below.
+              </p>
+              <dl class="readout__grid">
+                <div>
+                  <dt>Playing</dt>
+                  <dd id="ro-game" data-empty="true">&mdash;</dd>
+                </div>
+                <div>
+                  <dt>Watching</dt>
+                  <dd id="ro-viewers" data-empty="true">&mdash;</dd>
+                </div>
+                <div>
+                  <dt>Uptime</dt>
+                  <dd id="ro-uptime" data-empty="true">&mdash;</dd>
+                </div>
+                <div>
+                  <dt>Studio clock</dt>
+                  <dd id="ro-clock">--:--:--</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <p class="hero__line">
+            Variety streamer out of Chicago. Mostly tactical shooters, plus whatever game
+            has taken over my week by Thursday. Chat runs the show &mdash; <em>subathons,
+            viewer lobbies, and the occasional 5am speedrun</em>.
+          </p>
+        </div>
+
+        <div class="win next">
+          <div class="win__bar">
+            <span class="win__ico" aria-hidden="true"></span>
+            <span class="win__title">next_sign_on.exe</span>
+          </div>
+          <div class="win__body">
+            <p class="next__when">NEXT SIGNAL</p>
+            <p class="next__day" id="next-day">Friday</p>
+            <p class="next__slot" id="next-slot">7:30 PM &middot; America/Chicago</p>
+            <div class="countdown" id="countdown" aria-label="Time until the next stream">
+              <div class="led"><b id="cd-d">&mdash;</b><span>days</span></div>
+              <div class="led"><b id="cd-h">&mdash;</b><span>hours</span></div>
+              <div class="led"><b id="cd-m">&mdash;</b><span>min</span></div>
+              <div class="led"><b id="cd-s">&mdash;</b><span>sec</span></div>
+            </div>
+            <a class="gel next__cta" href="#schedule">SEE THE FULL WEEK &raquo;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span><b>Valorant</b> &mdash; ranked, no mercy, occasionally a stray bullet</span>
+        <span><b>Helldivers 2</b> &mdash; four divers, one democracy</span>
+        <span><b>Deadlock</b> &mdash; I am not good, I am committed</span>
+        <span><b>Rocket League</b> &mdash; grand plat and climbing sideways</span>
+        <span><b>Friday</b> is viewer lobby night &mdash; bring your worst loadout</span>
+        <span><b>Clips</b> get posted the morning after, every time</span>
+        <span><b>Valorant</b> &mdash; ranked, no mercy, occasionally a stray bullet</span>
+        <span><b>Helldivers 2</b> &mdash; four divers, one democracy</span>
+        <span><b>Deadlock</b> &mdash; I am not good, I am committed</span>
+        <span><b>Rocket League</b> &mdash; grand plat and climbing sideways</span>
+        <span><b>Friday</b> is viewer lobby night &mdash; bring your worst loadout</span>
+        <span><b>Clips</b> get posted the morning after, every time</span>
+      </div>
+    </div>
+
+    <section class="band" id="schedule">
+      <h2 class="band__title">The Week</h2>
+      <p class="band__note">
+        Same slots every week, in America/Chicago. If a game update breaks everything
+        or I lose my voice, it gets moved &mdash; and that lands in Discord first.
+      </p>
+      <div class="win">
+        <div class="win__bar">
+          <span class="win__ico" aria-hidden="true"></span>
+          <span class="win__title">weekly_schedule.exe</span>
+          <span class="win__badge">ALL TIMES CST/CDT</span>
+        </div>
+        <div class="week" id="week"></div>
+      </div>
+      <noscript>
+        <p class="band__note">
+          Tuesday 8:00 PM, Thursday 8:00 PM, Friday 7:30 PM, Saturday 2:00 PM,
+          Sunday 7:00 PM (America/Chicago).
+        </p>
+      </noscript>
+    </section>
+
+    <section class="band" id="clips">
+      <h2 class="band__title">Things That Happened</h2>
+      <p class="band__note">Short ones. The full archive lives on the channel.</p>
+
+      <div class="clips">
+        <a class="clip clip--wide" href="https://www.twitch.tv/ep1cLIVE/videos">
+          <div class="clip__frame" style="--c1:#1d2b4a; --c2:#3a1f3d">
+            <span class="clip__play" aria-hidden="true">&#9658;</span>
+            <span class="clip__tc">00:38</span>
+          </div>
+          <div class="clip__meta">
+            <span class="clip__title">1v5 clutch with no util and no plan</span>
+            <span class="clip__stat">42.1k views</span>
+          </div>
+        </a>
+
+        <a class="clip clip--tall" href="https://www.twitch.tv/ep1cLIVE/videos">
+          <div class="clip__frame" style="--c1:#4a2a1d; --c2:#221436">
+            <span class="clip__play" aria-hidden="true">&#9658;</span>
+            <span class="clip__tc">00:22</span>
+          </div>
+          <div class="clip__meta">
+            <span class="clip__title">My aim is a myth</span>
+            <span class="clip__stat">18.7k views</span>
+          </div>
+        </a>
+
+        <a class="clip" href="https://www.twitch.tv/ep1cLIVE/videos">
+          <div class="clip__frame" style="--c1:#16323a; --c2:#2a1640">
+            <span class="clip__play" aria-hidden="true">&#9658;</span>
+            <span class="clip__tc">01:04</span>
+          </div>
+          <div class="clip__meta">
+            <span class="clip__title">Helldiver of the year</span>
+            <span class="clip__stat">9.4k views</span>
+          </div>
+        </a>
+
+        <a class="clip" href="https://www.twitch.tv/ep1cLIVE/videos">
+          <div class="clip__frame" style="--c1:#3a1d2c; --c2:#181c33">
+            <span class="clip__play" aria-hidden="true">&#9658;</span>
+            <span class="clip__tc">00:17</span>
+          </div>
+          <div class="clip__meta">
+            <span class="clip__title">Chat picked my loadout again</span>
+            <span class="clip__stat">12.3k views</span>
+          </div>
+        </a>
+
+        <a class="clip" href="https://www.twitch.tv/ep1cLIVE/videos">
+          <div class="clip__frame" style="--c1:#243a1d; --c2:#201633">
+            <span class="clip__play" aria-hidden="true">&#9658;</span>
+            <span class="clip__tc">00:51</span>
+          </div>
+          <div class="clip__meta">
+            <span class="clip__title">The Ferrari strat, plat lobby</span>
+            <span class="clip__stat">7.8k views</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="band" id="rig">
+      <h2 class="band__title">What I'm Running</h2>
+      <p class="band__note">
+        Ask about settings any time &mdash; I keep the whole config in Discord so nobody
+        has to screenshot my menus.
+      </p>
+
+      <div class="win">
+        <div class="win__bar">
+          <span class="win__ico" aria-hidden="true"></span>
+          <span class="win__title">system_specs.txt</span>
+        </div>
+        <div class="win__body">
+          <dl class="spec">
+            <div><dt>CPU</dt><dd>Ryzen 7 9800X3D</dd></div>
+            <div><dt>GPU</dt><dd>RTX 5080</dd></div>
+            <div><dt>Main display</dt><dd>27&Prime; 1440p / 240Hz</dd></div>
+            <div><dt>Mic</dt><dd>Shure SM7B &rarr; GoXLR</dd></div>
+            <div><dt>Camera</dt><dd>Sony ZV-1 &rarr; Cam Link 4K</dd></div>
+            <div><dt>Sound</dt><dd>DT 900 Pro X</dd></div>
+          </dl>
+          <div class="marks">
+            <span>Variety</span>
+            <span>Raid friendly</span>
+            <span>Subathons</span>
+            <span>Charity streams</span>
+            <span>No spoilers in chat</span>
+            <span>18+ occasionally</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="watch">
+      <h2 class="band__title">Come Hang Out</h2>
+      <p class="band__note">Every link goes to the real thing. Pick your poison.</p>
+
+      <div class="watch">
+        <div class="win">
+          <div class="win__bar">
+            <span class="win__ico" aria-hidden="true"></span>
+            <span class="win__title">live_player.exe</span>
+            <span class="win__badge" id="embed-badge">OFFLINE</span>
+          </div>
+          <div class="embed" id="embed">
+            <p class="embed__msg" id="embed-msg">
+              The player shows up here when the channel is live.<br>
+              Until then the archive is open.
+            </p>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="linkbtn" href="https://www.twitch.tv/ep1cLIVE">
+            <span class="linkbtn__ico" data-ico="twitch" aria-hidden="true"></span>
+            <span class="linkbtn__txt">Twitch<em>@ep1cLIVE</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+          <a class="linkbtn" href="https://www.youtube.com/@ep2cLIVE">
+            <span class="linkbtn__ico" data-ico="youtube" aria-hidden="true"></span>
+            <span class="linkbtn__txt">YouTube<em>@ep2cLIVE</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+          <a class="linkbtn" href="https://twitter.com/ep1cLIVE">
+            <span class="linkbtn__ico" data-ico="twitter" aria-hidden="true"></span>
+            <span class="linkbtn__txt">Twitter<em>@ep1cLIVE</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+          <a class="linkbtn" href="https://dsc.gg/ep1c">
+            <span class="linkbtn__ico" data-ico="discord" aria-hidden="true"></span>
+            <span class="linkbtn__txt">Discord<em>dsc.gg/ep1c</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+          <a class="linkbtn" href="https://www.tiktok.com/@ep1clivewitha1">
+            <span class="linkbtn__ico" data-ico="tiktok" aria-hidden="true"></span>
+            <span class="linkbtn__txt">TikTok<em>@ep1clivewitha1</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+          <a class="linkbtn" href="mailto:ep1cbizinquiries@gmail.com">
+            <span class="linkbtn__ico" data-ico="mail" aria-hidden="true"></span>
+            <span class="linkbtn__txt">Business email<em>ep1cbizinquiries@gmail.com</em></span>
+            <span class="linkbtn__go" aria-hidden="true">&raquo;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__grid">
+      <div class="counterwrap">
+        <p class="counterwrap__label">HIT COUNTER</p>
+        <div class="counter" id="odometer" role="img" aria-label="Your visits to this page"><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span></div>
+        <p class="counterwrap__note">kept in your browser only</p>
+      </div>
+
+      <div class="badges" aria-hidden="true">
+        <span class="badge badge--cyan">MADE WITH NOTEPAD</span>
+        <span class="badge badge--lime">Y2K COMPLIANT</span>
+        <span class="badge badge--gold">BEST VIEWED AT 1024&times;768</span>
+        <span class="badge badge--magenta">POWERED BY ENERGY DRINKS</span>
+        <span class="badge badge--cyan">NO COOKIES &#9733; NO TRACKERS</span>
+      </div>
+
+      <div class="footer__links">
+        <a href="https://dsc.gg/ep1c">&#9997; Sign the guestbook &raquo; Discord</a>
+        <a href="#top">&uarr; Back to top</a>
+      </div>
+    </div>
+
+    <div class="footer__rule" aria-hidden="true"></div>
+    <p class="footer__legal">
+      ep1cLIVE &copy; 2026 &mdash; broadcasting from Chicago, IL &mdash;
+      this page is hand-written HTML, no build step, no framework.
+    </p>
+  </footer>
+</div>
+
+<div class="bars bars--foot" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<script type="application/json" id="ep1c-data">
+{
+  "tz": "America/Chicago",
+  "twitch": "ep1clive",
+  "twitchParent": "",
+  "schedule": [
+    { "dow": 2, "time": "20:00", "label": "8:00 PM", "game": "Valorant", "tag": "ranked grind" },
+    { "dow": 4, "time": "20:00", "label": "8:00 PM", "game": "Helldivers 2", "tag": "with the crew" },
+    { "dow": 5, "time": "19:30", "label": "7:30 PM", "game": "Viewer lobby", "tag": "chat picks" },
+    { "dow": 6, "time": "14:00", "label": "2:00 PM", "game": "Long haul", "tag": "whatever I'm into" },
+    { "dow": 0, "time": "19:00", "label": "7:00 PM", "game": "Just chatting", "tag": "slow night" }
+  ]
+}
+</script>
+<script src="./app.js" defer></script>
+</body>
+</html>
